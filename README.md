@@ -10,7 +10,7 @@ Ultra-minimal personal website built with Jekyll. Pure grayscale design, Markdow
 
 ### Adding a Blog Post (No Terminal Needed!)
 
-1. Go to [https://github.com/vsrvenna/vsrvenna.github.io](https://github.com/vsrvenna/vsrvenna.github.io)
+1. Go to [https://github.com/vsrvenna/vsrvenna.github.io](https://github.com/visareve/visareve.github.io)
 2. Navigate to the `_posts/` folder
 3. Click "Add file" → "Create new file"
 4. Name your file: `YYYY-MM-DD-your-post-title.md` (e.g., `2026-01-20-intro-to-neural-decoding.md`)
