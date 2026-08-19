@@ -451,7 +451,16 @@ $sidebar-w: 320px;
 
   .sidebar-inner { display: flex; flex-direction: column; height: 100%; }
 
+  .side-title {
+    margin: 0;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+  }
+
   .side-name {
+    display: inline-block;
     font-size: 1.9rem;
     font-weight: 700;
     line-height: 1.1;
@@ -547,6 +556,63 @@ $sidebar-w: 320px;
   p { color: var(--text); }
 }
 
+// Stats band (About)
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: $space-2;
+  margin-top: $space-4;
+  padding-top: $space-3;
+  border-top: 1px solid var(--border);
+}
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  .stat-num {
+    font-family: $font-mono;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--accent);
+    line-height: 1;
+  }
+  .stat-label { color: var(--muted); font-size: $text-xs; line-height: 1.3; }
+}
+@media (max-width: 560px) {
+  .stats { grid-template-columns: repeat(2, 1fr); gap: $space-3 $space-2; }
+}
+
+// Category label on project cards
+.project-card .card-cat {
+  display: inline-block;
+  font-family: $font-mono;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin-bottom: 0.3rem;
+}
+
+// Experience bullets
+.ti-bullets {
+  margin: 0.3rem 0 0;
+  padding-left: 1.1rem;
+  list-style: none;
+  li {
+    position: relative;
+    color: var(--muted);
+    font-size: $text-sm;
+    margin-bottom: 0.35rem;
+    line-height: 1.5;
+    &::before {
+      content: "▸";
+      position: absolute;
+      left: -1.1rem;
+      color: var(--accent);
+    }
+  }
+}
+
 // Timeline (experience + education)
 .timeline-item {
   padding-left: $space-3;
@@ -623,18 +689,45 @@ $sidebar-w: 320px;
   .tags { flex: 1 1 auto; }
 }
 
-// Writing
+// Writing — inline expand/collapse accordion
 .writing-list { display: flex; flex-direction: column; }
 .writing-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: $space-2;
-  padding: 0.6rem 0;
   border-bottom: 1px solid var(--border);
-  &:hover { text-decoration: none; .wi-title { color: var(--accent); } }
-  .wi-title { color: var(--text); font-size: $text-sm; }
+
+  summary {
+    display: flex;
+    align-items: baseline;
+    gap: $space-2;
+    padding: 0.7rem 0;
+    cursor: pointer;
+    list-style: none;                 // hide default disclosure marker
+    &::-webkit-details-marker { display: none; }
+    &:hover .wi-title { color: var(--accent); }
+  }
+
+  .wi-title { color: var(--text); font-size: $text-sm; flex: 1 1 auto; min-width: 0; }
   .wi-date { color: var(--faint); font-size: $text-xs; font-family: $font-mono; white-space: nowrap; }
+  .wi-chevron {
+    color: var(--faint);
+    font-size: 1.1rem;
+    line-height: 1;
+    flex: 0 0 auto;
+    transition: transform 0.15s ease;
+  }
+  &[open] .wi-chevron { transform: rotate(90deg); color: var(--accent); }
+
+  .wi-body {
+    padding: 0.25rem 0 $space-3;
+    color: var(--text);
+    font-size: $text-sm;
+
+    h2 { font-size: $text-lg; margin: $space-3 0 $space-2; }
+    h3 { font-size: $text-base; margin: $space-2 0 0.4rem; }
+    p { color: var(--muted); font-size: $text-sm; }
+    ul, ol { color: var(--muted); font-size: $text-sm; }
+    img { max-width: 100%; height: auto; border-radius: $radius; }
+    pre { font-size: $text-xs; }
+  }
 }
 
 // Contact

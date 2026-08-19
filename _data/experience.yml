@@ -1,14 +1,24 @@
 - role: "Graduate Research Assistant"
   organization: "COOR Lab, USC — Clinical Biomechanics & Sports Research"
   period: "Jul 2025 - Present"
-  description: "Quantified neuromuscular recovery on an NIH-funded rotator cuff study, showing force and timing recovery are statistically independent despite symptom improvement — informing how clinicians track rehab (submitted to APTA CSM 2027). Built the Python sEMG pipeline behind it (2 kHz, 7 muscles, 54 of 78 patients): filtering, TKEO onset detection, MVIC normalization."
+  summary: "Clinical sEMG research on an NIH-funded rotator cuff study."
+  highlights:
+    - "Showed force and timing recovery are statistically independent despite symptom improvement — reframing how clinicians track post-injury rehab (submitted to APTA CSM 2027)."
+    - "Built the Python sEMG pipeline behind it: 2 kHz, 7 muscles, 54 of 78 patients — filtering, TKEO onset detection, MVIC normalization."
+    - "Quantified recovery with linear mixed-effects models and leave-one-out cross-validation."
 
 - role: "Machine Learning Intern"
   organization: "BrainSightAI"
   period: "Jan 2024 - Jun 2024"
-  description: "Benchmarked dMRI denoising methods (MPPCA vs Patch2Self on SNR/RMSE/MSE) to test the reliability of brain-tractography outputs used in clinical imaging, and validated the pipeline end-to-end across clinical and public datasets — surfacing sources of variability that affect diagnostic reliability."
+  summary: "Diffusion-MRI pipeline validation for clinical imaging."
+  highlights:
+    - "Benchmarked dMRI denoising methods (MPPCA vs Patch2Self on SNR/RMSE/MSE) to test the reliability of brain-tractography outputs."
+    - "Validated the pipeline end-to-end across clinical and public datasets, surfacing sources of variability that affect diagnostic reliability."
 
 - role: "Honours Student Researcher"
   organization: "Human Movement Analysis Lab, IIIT Sri City"
   period: "May 2022 - May 2024"
-  description: "Designed and led collection of 4 public sEMG datasets (EMAHA-DB4–DB7, 10–25 subjects each) with Noraxon sensors — released all 4 publicly, yielding 3 conference publications. Built the end-to-end pipelines (filtering, segmentation, feature extraction) and trained CNN-BiLSTM and classical ML classifiers."
+  summary: "Led sEMG data collection and modeling; 3 publications."
+  highlights:
+    - "Designed and led collection of 4 public sEMG datasets (EMAHA-DB4–DB7, 10–25 subjects each) with Noraxon sensors — released all 4 publicly, yielding 3 conference publications."
+    - "Built end-to-end pipelines (filtering, segmentation, feature extraction) and trained CNN-BiLSTM and classical ML classifiers."

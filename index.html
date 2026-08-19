@@ -16,6 +16,13 @@ layout: home
     reproducible, and shipped. I'm seeking full-time ML / applied-ML roles for 2026 —
     especially sensor ML, neurotechnology, and LLM/ML infrastructure.
   </p>
+
+  <div class="stats">
+    <div class="stat"><span class="stat-num">3</span><span class="stat-label">Peer-reviewed papers</span></div>
+    <div class="stat"><span class="stat-num">4</span><span class="stat-label">Public sEMG datasets released</span></div>
+    <div class="stat"><span class="stat-num">88.3%</span><span class="stat-label">ISI factual accuracy</span></div>
+    <div class="stat"><span class="stat-num">3+</span><span class="stat-label">Years research experience</span></div>
+  </div>
 </section>
 
 <section id="experience" class="sec">
@@ -27,7 +34,13 @@ layout: home
         <span class="ti-period">{{ exp.period }}</span>
       </div>
       <p class="ti-org">{{ exp.organization }}</p>
-      <p class="ti-desc">{{ exp.description }}</p>
+      {% if exp.highlights %}
+        <ul class="ti-bullets">
+          {% for h in exp.highlights %}<li>{{ h }}</li>{% endfor %}
+        </ul>
+      {% else %}
+        <p class="ti-desc">{{ exp.description }}</p>
+      {% endif %}
     </div>
   {% endfor %}
 </section>
@@ -38,6 +51,7 @@ layout: home
     {% for project in site.data.projects %}
       <article class="project-card">
         <div class="card-head">
+          {% if project.category %}<span class="card-cat">{{ project.category }}</span>{% endif %}
           <h3>{{ project.title }}</h3>
           <span class="meta">{{ project.institution }} · {{ project.date }}</span>
         </div>
@@ -100,11 +114,17 @@ layout: home
 <section id="writing" class="sec">
   <h2 class="sec-title">Writing</h2>
   <div class="writing-list">
-    {% for post in site.posts limit:4 %}
-      <a class="writing-item" href="{{ post.url | relative_url }}">
-        <span class="wi-title">{{ post.title }}</span>
-        <span class="wi-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-      </a>
+    {% for post in site.posts %}
+      <details class="writing-item">
+        <summary>
+          <span class="wi-title">{{ post.title }}</span>
+          <span class="wi-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+          <span class="wi-chevron" aria-hidden="true">›</span>
+        </summary>
+        <div class="wi-body post-content">
+          {{ post.content }}
+        </div>
+      </details>
     {% endfor %}
   </div>
 </section>
