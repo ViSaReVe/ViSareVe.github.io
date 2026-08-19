@@ -1,6 +1,7 @@
 # Site settings
 title: "Vidya Sagar Reddy Venna"
-description: "MS Student in ECE at USC | ML & Neurotechnology Researcher"
+description: "ML engineer working on biosignals, neural decoding, and time-series ML. MS ECE (ML & Data Science) at USC, May 2026."
+tagline: "ML & Signal-Processing Engineer"
 url: "https://visareve.github.io"
 baseurl: ""
 
@@ -52,3 +53,4 @@ defaults:
       path: ""
     values:
       layout: "page"
+      image: "/assets/img/og-card.png"
