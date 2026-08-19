@@ -9,7 +9,7 @@
     - "Built a four-family automated evaluation harness (information retention, n-gram overlap, LLM-as-judge, graph topology) instrumented with Weights & Biases, so every run emits reproducible quality signals."
 
 - role: "Graduate Student Researcher"
-  organization: "COOR Lab, USC — Clinical Biomechanics & Sports Research"
+  organization: "COOR Lab, USC — Clinical Biomechanics, Orthopedic and Sports Outcomes Research"
   logo: "/assets/img/logos/coor-usc.png"
   period: "Jul 2025 - Present"
   summary: "Clinical sEMG research on an NIH-funded rotator cuff trial."
