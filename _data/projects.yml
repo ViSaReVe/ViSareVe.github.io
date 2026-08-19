@@ -1,15 +1,14 @@
-- title: "Scientific Knowledge Extraction"
-  institution: "USC Information Sciences Institute (ISI)"
-  date: "2025"
+- title: "Paper Copilot"
+  institution: "Personal Project"
+  date: "2026"
   category: "LLM / RAG"
-  description: "End-to-end LLM pipeline that extracts structured knowledge (entities, attributes, relationships) from research PDFs, using batched inference and caching to run at scale, plus a verification step cross-checking each claim against the source text. Built the evaluation harness — multiple-choice fidelity scoring with bootstrap confidence intervals and an n-gram overlap check to flag copied text."
-  metric: "88.3%"
-  metric_label: "factual accuracy (95% CI 82.9–93.3)"
-  github: "https://github.com/ViSaReVe/alexandria-ku"
+  description: "Local literature-review copilot — PDF on the left, chat on the right, every answer carrying (paper, page) citations and refusing when evidence is weak. Runs fully offline: no API keys, no GPU. Evaluated properly on 39 papers and 59 hand-reviewed questions with bootstrap CIs and paired McNemar tests, which showed the retrievers are statistically tied (TF-IDF vs hybrid, p = 1.000) and that LLM query-reformulation actively degraded results at 2x latency — built, measured, and left off by default."
+  metric: "0.88 Doc-Hit@5"
+  metric_label: "hybrid RRF, MRR 0.820 — n=59, bootstrap 95% CI"
   tags:
-    - LLM
     - RAG
-    - Evaluation
+    - Retrieval Eval
+    - FastAPI
     - Python
   featured: true
 
@@ -45,8 +44,8 @@
   institution: "Personal Project"
   date: "2025"
   category: "MLOps"
-  description: "End-to-end sensor time-series ML system: sliding-window DSP features, XGBoost RUL (RMSE 16.80 on NASA CMAPSS) and anomaly detection (PR-AUC 1.00 on CWRU), served via FastAPI with MLflow tracking, Docker, and CI/CD on Azure Container Apps."
-  metric: "RMSE 16.80 · PR-AUC 1.00"
+  description: "End-to-end sensor time-series ML system: sliding-window DSP features, XGBoost RUL (RMSE 16.80 on NASA CMAPSS) and bearing-fault detection (PR-AUC 0.9998 on CWRU), served via FastAPI with MLflow tracking, Docker, and CI/CD on Azure Container Apps."
+  metric: "RMSE 16.80 · PR-AUC 0.9998"
   metric_label: "NASA C-MAPSS RUL · CWRU fault detection"
   github: "https://github.com/ViSaReVe/predictive-maintenance-lab"
   tags:

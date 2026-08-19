@@ -1,24 +1,33 @@
-- role: "Graduate Research Assistant"
+- role: "Graduate Researcher"
+  organization: "USC Information Sciences Institute — Project Alexandria"
+  period: "Aug 2025 - Present"
+  summary: "LLM pipeline turning research PDFs into a queryable knowledge graph."
+  highlights:
+    - "Built a PDF-to-structured-record service in Python (2,910 lines across 8 modules) with cloud and fully local model backends interchangeable behind one interface, cutting extraction cost per page to zero on the local path."
+    - "Added semantic retrieval over ChromaDB with sentence-transformer embeddings, plus a Neo4j layer that resolves repeated entities across documents via MERGE on (name, type) — a cross-document node/edge graph instead of per-file silos."
+    - "Built a four-family automated evaluation harness (information retention, n-gram overlap, LLM-as-judge, graph topology) instrumented with Weights & Biases, so every run emits reproducible quality signals."
+
+- role: "Graduate Student Researcher"
   organization: "COOR Lab, USC — Clinical Biomechanics & Sports Research"
   period: "Jul 2025 - Present"
-  summary: "Clinical sEMG research on an NIH-funded rotator cuff study."
+  summary: "Clinical sEMG research on an NIH-funded rotator cuff trial."
   highlights:
-    - "Showed force and timing recovery are statistically independent despite symptom improvement — reframing how clinicians track post-injury rehab (submitted to APTA CSM 2027)."
-    - "Built the Python sEMG pipeline behind it: 2 kHz, 7 muscles, 54 of 78 patients — filtering, TKEO onset detection, MVIC normalization."
-    - "Quantified recovery with linear mixed-effects models and leave-one-out cross-validation."
+    - "Engineered the Python signal-processing pipeline for multi-channel surface EMG: 2 kHz across 7 muscles and 54 patients — notch and Butterworth filtering, TKEO onset detection, MVIC normalization into a QC-gated dataset."
+    - "Showed force and neuromuscular timing recover independently (r = -0.012, p = 0.938) with linear mixed-effects models under Bonferroni correction and leave-one-out cross-validated logistic regression."
+    - "Result carried by two APTA CSM abstracts and a manuscript."
 
 - role: "Machine Learning Intern"
   organization: "BrainSightAI"
   period: "Jan 2024 - Jun 2024"
   summary: "Diffusion-MRI pipeline validation for clinical imaging."
   highlights:
-    - "Benchmarked dMRI denoising methods (MPPCA vs Patch2Self on SNR/RMSE/MSE) to test the reliability of brain-tractography outputs."
-    - "Validated the pipeline end-to-end across clinical and public datasets, surfacing sources of variability that affect diagnostic reliability."
+    - "Processed clinical 3T patient MRI scans with UNet3D models (VoxelBox) to extract DTI metrics and 3D white-matter tractography, running visual QC on FA maps to eliminate spatial artifacts and false fiber streamlines."
+    - "Caught a denoising failure that aggregate SNR and RMSE both passed — blocky spatial artifacts visible only on rendered FA maps — and changed the production default on that evidence."
 
 - role: "Honours Student Researcher"
   organization: "Human Movement Analysis Lab, IIIT Sri City"
   period: "May 2022 - May 2024"
-  summary: "Led sEMG data collection and modeling; 3 publications."
+  summary: "Led sEMG data collection and modeling; 3 IEEE publications."
   highlights:
-    - "Designed and led collection of 4 public sEMG datasets (EMAHA-DB4–DB7, 10–25 subjects each) with Noraxon sensors — released all 4 publicly, yielding 3 conference publications."
-    - "Built end-to-end pipelines (filtering, segmentation, feature extraction) and trained CNN-BiLSTM and classical ML classifiers."
+    - "Led collection and public release of four surface EMG datasets (EMAHA-DB4 to DB7, 70 subjects)."
+    - "Trained CNN and BiLSTM classifiers over a filter, rectify, normalize, feature-extract pipeline — producing three peer-reviewed IEEE publications (EMBC, BIOSIGNALS, ISPA)."

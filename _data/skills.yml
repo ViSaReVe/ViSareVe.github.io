@@ -1,0 +1,54 @@
+- group: "Languages"
+  items:
+    - Python
+    - C++
+    - SQL
+    - MATLAB
+    - JavaScript
+    - R
+
+- group: "ML & AI"
+  items:
+    - PyTorch
+    - TensorFlow
+    - scikit-learn
+    - XGBoost
+    - JAX
+    - ONNX
+    - OpenCV
+    - Hugging Face
+
+- group: "LLM & Retrieval"
+  items:
+    - LangChain
+    - ChromaDB
+    - Neo4j
+    - Hybrid retrieval (RRF)
+    - Sentence transformers
+    - Ollama (local inference)
+
+- group: "Signals & Time-Series"
+  items:
+    - Surface EMG
+    - TKEO onset detection
+    - Kalman / PSID
+    - Wavelets
+    - Mixed-effects models
+    - Bootstrap CIs
+
+- group: "Systems & MLOps"
+  items:
+    - Docker
+    - FastAPI
+    - GitHub Actions
+    - pytest
+    - MLflow
+    - Weights & Biases
+    - Git
+    - Linux
+
+- group: "Cloud & Data"
+  items:
+    - Azure
+    - GCP
+    - Spark

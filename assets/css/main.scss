@@ -759,6 +759,41 @@ $sidebar-w: 320px;
   font-size: $text-xs;
 }
 
+// Skills
+.skill-groups { display: flex; flex-direction: column; gap: $space-2; }
+
+.skill-group {
+  display: grid;
+  grid-template-columns: 185px 1fr;
+  gap: $space-2;
+  align-items: baseline;
+  padding-bottom: $space-2;
+  border-bottom: 1px solid var(--border);
+  &:last-child { border-bottom: none; padding-bottom: 0; }
+}
+
+.skill-label {
+  font-family: $font-mono;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+}
+
+.skill-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+
+.skill-tag {
+  font-size: $text-xs;
+  color: var(--pill-text);
+  background: var(--pill-bg);
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+}
+
+@media (max-width: 640px) {
+  .skill-group { grid-template-columns: 1fr; gap: 0.5rem; }
+}
+
 // ── Responsive: stack sidebar on top ─────────────────────────
 @media (max-width: 860px) {
   .layout { flex-direction: column; }
