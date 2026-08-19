@@ -28,19 +28,24 @@ layout: home
 <section id="experience" class="sec">
   <h2 class="sec-title">Experience</h2>
   {% for exp in site.data.experience %}
-    <div class="timeline-item">
-      <div class="ti-head">
-        <h3>{{ exp.role }}</h3>
-        <span class="ti-period">{{ exp.period }}</span>
-      </div>
-      <p class="ti-org">{{ exp.organization }}</p>
-      {% if exp.highlights %}
-        <ul class="ti-bullets">
-          {% for h in exp.highlights %}<li>{{ h }}</li>{% endfor %}
-        </ul>
-      {% else %}
-        <p class="ti-desc">{{ exp.description }}</p>
+    <div class="timeline-item{% if exp.logo %} has-logo{% endif %}">
+      {% if exp.logo %}
+        <img class="ti-logo" src="{{ exp.logo | relative_url }}" alt="{{ exp.organization }}" width="44" height="44" loading="lazy">
       {% endif %}
+      <div class="ti-body">
+        <div class="ti-head">
+          <h3>{{ exp.role }}</h3>
+          <span class="ti-period">{{ exp.period }}</span>
+        </div>
+        <p class="ti-org">{{ exp.organization }}</p>
+        {% if exp.highlights %}
+          <ul class="ti-bullets">
+            {% for h in exp.highlights %}<li>{{ h }}</li>{% endfor %}
+          </ul>
+        {% else %}
+          <p class="ti-desc">{{ exp.description }}</p>
+        {% endif %}
+      </div>
     </div>
   {% endfor %}
 </section>
