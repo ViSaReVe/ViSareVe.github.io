@@ -680,6 +680,17 @@ $sidebar-w: 320px;
   border-left: none;
 }
 
+.ti-logo-link {
+  display: block;
+  &:hover .ti-logo { border-color: var(--accent); }
+}
+
+.ti-org a {
+  color: var(--accent);
+  &:hover { color: var(--accent-hover); text-decoration: underline; }
+  .ti-arrow { font-size: 0.85em; }
+}
+
 .ti-logo {
   width: 44px;
   height: 44px;

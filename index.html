@@ -30,14 +30,22 @@ layout: home
   {% for exp in site.data.experience %}
     <div class="timeline-item{% if exp.logo %} has-logo{% endif %}">
       {% if exp.logo %}
+        {% if exp.url %}<a class="ti-logo-link" href="{{ exp.url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ exp.organization }} website">{% endif %}
         <img class="ti-logo" src="{{ exp.logo | relative_url }}" alt="{{ exp.organization }}" width="44" height="44" loading="lazy">
+        {% if exp.url %}</a>{% endif %}
       {% endif %}
       <div class="ti-body">
         <div class="ti-head">
           <h3>{{ exp.role }}</h3>
           <span class="ti-period">{{ exp.period }}</span>
         </div>
-        <p class="ti-org">{{ exp.organization }}</p>
+        <p class="ti-org">
+          {%- if exp.url -%}
+            <a href="{{ exp.url }}" target="_blank" rel="noopener noreferrer">{{ exp.organization }} <span class="ti-arrow">↗</span></a>
+          {%- else -%}
+            {{ exp.organization }}
+          {%- endif -%}
+        </p>
         {% if exp.highlights %}
           <ul class="ti-bullets">
             {% for h in exp.highlights %}<li>{{ h }}</li>{% endfor %}

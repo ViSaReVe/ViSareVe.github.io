@@ -1,6 +1,7 @@
 - role: "Graduate Researcher"
   organization: "USC Information Sciences Institute — Project Alexandria"
   logo: "/assets/img/logos/usc-isi.png"
+  url: "https://www.isi.edu"
   period: "Aug 2025 - Present"
   summary: "LLM pipeline turning research PDFs into a queryable knowledge graph."
   highlights:
@@ -11,6 +12,7 @@
 - role: "Graduate Student Researcher"
   organization: "COOR Lab, USC — Clinical Biomechanics, Orthopedic and Sports Outcomes Research"
   logo: "/assets/img/logos/coor-usc.png"
+  url: "https://sites.usc.edu/coorlab/"
   period: "Jul 2025 - Present"
   summary: "Clinical sEMG research on an NIH-funded rotator cuff trial."
   highlights:
@@ -21,6 +23,7 @@
 - role: "Machine Learning Intern"
   organization: "BrainSightAI"
   logo: "/assets/img/logos/brainsightai.png"
+  url: "https://www.brainsightai.com"
   period: "Jan 2024 - Jun 2024"
   summary: "Diffusion-MRI pipeline validation for clinical imaging."
   highlights:
@@ -30,6 +33,7 @@
 - role: "Honours Student Researcher"
   organization: "Human Movement Analysis Lab, IIIT Sri City"
   logo: "/assets/img/logos/hmal-iiit.png"
+  url: "https://www.linkedin.com/company/hma-lab-iiits/"
   period: "May 2022 - May 2024"
   summary: "Led sEMG data collection and modeling; 3 IEEE publications."
   highlights:
